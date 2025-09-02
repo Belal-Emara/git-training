@@ -65,9 +65,9 @@
   &:hover .change_color_from_green {
     fill: var(--orange);
   }
-  &:hover .change_color_from_grey {
+/*   &:hover .change_color_from_grey {
     fill: var(--purple);
-  }
+  } */
 }
 
 .change_color_from_green {
