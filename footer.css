@@ -1,0 +1,74 @@
+footer {
+  max-width: 900px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: 25px;
+  background-color: #4caf4f;
+  border-radius: 8px 8px 0px 0px;
+}
+.footerSVG {
+  width: 30px;
+}
+
+a {
+  text-decoration: none;
+  background-color: white;
+  border-radius: 50%;
+  padding: 15px;
+  position: relative;
+}
+
+a:hover {
+  fill: white;
+  background-color: var(--color);
+}
+
+/* A before  (message)*/
+
+a::after {
+  content: attr(data-name);
+  font-size: 10px;
+  background-color: var(--color);
+  color: white;
+  padding: 5px 0px;
+  border-radius: 25px;
+  width: 60px;
+  text-align: center;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 40%;
+  left: 0px;
+  transition: all 0.3s;
+  opacity: 0;
+  z-index: -1;
+}
+
+a:hover::after {
+  opacity: 1;
+  z-index: 0;
+  transform: translate(0px, 42px) rotate(0deg);
+}
+
+/* A before  (triangle)*/
+
+a::before {
+  content: "";
+  border-top: 7px solid var(--color);
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  position: absolute;
+  /* transform: rotate(45deg); */
+  top: 0px;
+  left: 39%;
+  opacity: 0;
+
+  transition: all 0.3s;
+}
+
+a:hover::before {
+  opacity: 1;
+  transform: translate(0px, -10px) /*rotate(0deg)*/;
+}
